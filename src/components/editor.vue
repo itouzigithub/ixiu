@@ -53,7 +53,7 @@
 		<!-- 编辑区-PC -->
 		<div class="pc" v-show="status == 1" id="pc">
 			<!-- 需取出提交的html代码 -->
-			<div id="PC">
+			<div class="innerWrapper">
 				<div :style="{backgroundColor: bgc, backgroundImage: 'url(' + backImgPC + ')'}" class="innerWrapper">
 					<!-- 大图 -->
 					<div class="pc-img" v-for="(val, index) in imgOfPC" 
@@ -731,9 +731,5 @@
 		min-height: 100%;
 		height: 100%;
 		background-repeat: round;
-	}
-	#PC {
-		min-height: calc(100% - 180px);
-		height: 0px;
 	}
 </style>
