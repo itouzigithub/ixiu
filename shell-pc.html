@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="vierport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<title>pc端</title>
+</head>
+<style>
+	* {
+		padding: 0;
+		margin: 0;
+		box-sizing: border-box;
+	}
+	a:hover {
+		opacity: .9;
+	}
+	.pc-img {
+		width: 100%;
+		background-position: top center;
+		background-repeat: no-repeat;
+	}
+	.innerWrapper {
+		min-height: 100%;
+		background-repeat: round;
+	}
+	.header {
+		width: 100%;
+		height: 80px;
+		line-height: 80px;
+		color: #999;
+		background-color: #30364F;
+	}
+	.header img {
+		margin-top: 25px;
+	}
+	.content {
+		width: 1200px;
+		margin: 0 auto;
+	}
+	#main {
+		position: relative;
+	}
+</style>
+<body>
+
+	<!-- 固定的header -->
+	<div class="header">
+		<div class="content">
+			<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJwAAAAeCAMAAADuHoesAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAL9UExURQAAAP///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////4bU3HAAAAD+dFJOUwAw/f7AsGDQcIABA+D8B/MTBdML+QYXo/AEbC3H9RvtApn03/HiOMMMlrbJ5qz73R3ryhAU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">
+		</div>
+	</div>
+
+	<div id="main">
+		<!-- The html code should be injected here | 请将代码插入这里 -->
+	</div>
+
+	
+</body>
+</html>
