@@ -1,6 +1,6 @@
 # ixiu
 
-> a simple H5 editor. [Have a try](https://bison1994.github.io/kidney/ixiu)
+> a simple H5 editor. [Have a try](https://bison1994.github.io/kidney/iXiu)
 
 ## Build Setup
 
