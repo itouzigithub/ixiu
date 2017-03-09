@@ -1,6 +1,6 @@
 # ixiu
 
-> A Vue.js project
+> a simple H5 editor. [Have a try](https://bison1994.github.io/kidney/ixiu)
 
 ## Build Setup
 
