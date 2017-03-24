@@ -2,7 +2,7 @@
 
 > A simple H5 generator based on Vue.js and Vue-router, build with Vue-cli
 
-## Documents you may need
+## Docs you may need
 
 * [Vue](https://cn.vuejs.org/v2/guide/)
 * [Vue-router](http://router.vuejs.org/zh-cn/essentials/getting-started.html)
@@ -47,3 +47,10 @@ src
  |--App.vue
  |--main.js
 ```
+
+## Integrating Font-awesome
+1. download
+    npm install font-awesome --save-dev
+2. import
+    // main.js
+    import 'font-awesome/css/font-awesome.min.css'
