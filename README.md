@@ -1,7 +1,8 @@
 # ixiu
 
 > A simple H5 generator based on Vue.js and Vue-router, build with Vue-cli
-> We use less as css processor and  
+
+> Use less as css pre-processor and font-awesome as icon-font
 
 ## Docs you may need
 
@@ -47,7 +48,14 @@ src
  |--router
        |--index.js
  |--App.vue
+ |--global.less
  |--main.js
+
+static
+ |--base.css
+
+shell-mobile.html
+shell-pc.html
 ```
 
 ## Integrating Font-awesome
@@ -79,6 +87,7 @@ src
 
 > Tip: IXIU has already integrated font-awesome and less. Just for illustration.
 
+
 ## Using HandleMenu
 
 1. import
@@ -106,7 +115,7 @@ src
   </menu>
 ```
 
-4. pass the menu data
+4. pass the props data
 
 ``` bash
   // data
@@ -162,6 +171,9 @@ src
   }
 ```
 
+> By default, the menu widget will hide itself when mouse out
+
+
 ## Using Pagination
 
 > import and register rules are just same as HandleMenu
@@ -175,4 +187,76 @@ src
   </div>
 ```
 
-2. define turnpage function
+2. define callback function
+
+``` bash
+  // methods
+  turnPage (index) {
+    // index represents page number
+  }
+```
+
+## Using PromptBox
+
+1. put in your template
+
+``` bash
+  // basic
+  <promptbox title="删除提示" v-on:confirm="delete" ref="deletion" content="您确认删除该项目吗">
+  </promptbox>
+
+  // pass id
+  <promptbox title="删除提示" v-on:confirm="delete" ref="deletion" content="您确认删除该项目吗" :id="id">
+  </promptbox>
+
+  // custom content
+  <promptbox title="login" v-on:confirm="login" ref="login">
+    <div>
+      <p>Username</p>
+      <input type="text" v-model="name">
+      <p>Password</p>
+      <input type="password" v-model="password">
+    </div>
+  </promptbox>
+```
+
+2. define callback function
+
+``` bash
+  // methods
+  delete (id) {
+    // id is undefined unless you pass it
+  }
+```
+
+3. show promptbox
+
+``` bash
+  // methods
+  showPrompt () {
+    this.$refs.deletion.show = true;
+  }
+```
+
+## Using tip
+
+``` bash
+  import { tip } from './methods'
+
+  // the default value is '操作成功'
+  tip(); // 操作成功
+  tip('删除成功'); // 删除成功
+
+  // warning
+  tip('删除失败', false);
+```
+
+## Using directives
+
+``` bash
+  // you have to set the direction
+  <span v-tip.top="提示内容">上方提示</span>
+  <span v-tip.right="提示内容">右方提示</span>
+  <span v-tip.bottom="提示内容">下方提示</span>
+  <span v-tip.left="提示内容">左侧提示</span>
+```

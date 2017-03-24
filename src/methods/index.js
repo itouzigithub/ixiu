@@ -3,7 +3,7 @@
  * @val { string } 提示内容
  * @type { boolean } true：成功 false：失败
  */
-export function tip (val = '操作成功', type = true) {
+export function tip (val='操作成功', type=true) {
 	var box = document.createElement("div");
 	var child = document.createElement("div");
 	var style = {
