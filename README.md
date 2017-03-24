@@ -268,7 +268,6 @@ tip('删除失败', false);
 
 > Tip: don't use this directive on router-link
 
-
 ## Some notices
 
 1. button size
@@ -285,6 +284,7 @@ tip('删除失败', false);
 > Tip: don't use 'zoom', because firefox doesn't support it
 
 <br>
+
 2. CORS
 
 &nbsp;&nbsp;&nbsp;&nbsp;[refrence](http://vuejs-templates.github.io/webpack/proxy.html)
@@ -306,6 +306,7 @@ proxyTable: {
 ```
 
 <br>
+
 3. Config the assets route
 
 &nbsp;&nbsp;&nbsp;&nbsp;By default, static assets path is composed of
@@ -371,6 +372,7 @@ assetsPublicPath: '/ixiu/'
 ```
 
 <br>
+
 4. Inline style: backgoundImage
 
 &nbsp;&nbsp;&nbsp;&nbsp;In .vue files, if you set backgound-image in inline style, you might go wrong:
