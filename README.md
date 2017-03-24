@@ -348,11 +348,7 @@ dist
   |--index.html
 ```
 
-  If you put all the files under the dist in the root directory, everything will work fine.
-
-  But if not, the output is probably not what you want.
-
-  For example, suppose your files will eventually go to:
+  If you put all the files under the dist in the root directory, everything will work fine. <br>But if not, the output is probably not what you want. <br>For example, suppose your files will eventually go to:
 
 ```
 http://mms.itouz.com/ixiu
