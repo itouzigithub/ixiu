@@ -59,13 +59,13 @@ src
   import 'font-awesome/css/font-awesome.min.css'
 ```
 
-## HandleMenu Usage
+## Using HandleMenu
 1. import
-```
+``` bash
   import handleMenu from '../components/HandleMenu'
 ```
 2. register
-```
+``` bash
   components: {
     'menu': handleMenu
   }
@@ -73,7 +73,7 @@ src
     Tip: if the component is registered globally, just skipping the above steps.
 
 3. put in your template
-```
+``` bash
   <menu :e="eventObj"
     v-on:menuEvent="handleBtnEvent"
     :menudata="menuForBtn"
@@ -82,7 +82,7 @@ src
 ```
 
 4. pass the menu data
-```
+``` bash
   // data
   eventObj: null,
   menuForBtn: [{
@@ -106,7 +106,7 @@ src
     iconnames come from [font-awesome](http://fontawesome.io/icons/)
 
 5. define the callback function
-```
+``` bash
   // methods
   handleBtnEvent (eventkey) {
     switch (eventkey) {
@@ -125,7 +125,7 @@ src
 ```
 
 6. show menu
-```
+``` bash
   // methods
   showMenu () {
     this.$refs.menu.show = true;
