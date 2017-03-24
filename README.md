@@ -1,6 +1,13 @@
 # ixiu
 
-> a simple H5 editor. [Have a try](https://bison1994.github.io/kidney/iXiu)
+> A simple H5 generator based on Vue.js and Vue-router, build with Vue-cli
+
+## Documents you may need
+
+[Vue](https://cn.vuejs.org/v2/guide/)
+[Vue-router](http://router.vuejs.org/zh-cn/essentials/getting-started.html)
+[Vue-cli](http://vuejs-templates.github.io/webpack/index.html)
+[vue-loader](http://vuejs.github.io/vue-loader)
 
 ## Build Setup
 
@@ -18,4 +25,3 @@ npm run build
 npm run build --report
 ```
 
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).

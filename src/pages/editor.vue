@@ -172,8 +172,8 @@
 	</div>
 </template>
 <script>
-	import handleMenu from './HandleMenu'
-	import promptbox from './PromptBox'
+	import handleMenu from '../components/HandleMenu'
+	import promptbox from '../components/PromptBox'
 	import { tip } from '../method'
 	export default {
 		data () {
