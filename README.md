@@ -51,10 +51,62 @@ src
 ## Integrating Font-awesome
 1. download
 ``` bash
-    npm install font-awesome --save-dev
+  npm install font-awesome --save-dev
 ```
 2. import
 ``` bash
-    // main.js
-    import 'font-awesome/css/font-awesome.min.css'
+  // main.js
+  import 'font-awesome/css/font-awesome.min.css'
+```
+
+## HandleMenu Usage
+1. import
+```
+  import handleMenu from '../components/HandleMenu'
+```
+2. register
+```
+  components: {
+    'handleMenu': handleMenu
+  }
+```
+  Tip: if the component is registered globally, just skiping the above steps and use it directly.
+3. pass the menu data
+```
+  // data
+  menuForBtn: [{
+    name: '编辑',
+    eventkey: 1,
+    iconname: 'edit'
+  }, {
+    name: '删除',
+    eventkey: 2,
+    iconname: 'trash'
+  }, {
+    name: '向左偏移',
+    eventkey: 3,
+    iconname: 'arrow-left'
+  }, {
+    name: '向右偏移',
+    eventkey: 4,
+    iconname: 'arrow-right'
+  }]
+```
+4. define the callback function
+```
+  // methods
+  handleBtnEvent (eventkey) {
+    switch (eventkey) {
+      case 1:
+        // edit btn
+        break;
+      case 2:
+        // delete btn
+        break;
+      case 3:
+        // moveLeft
+        break;
+      case 4:
+        // moveRight
+    }
 ```
