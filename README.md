@@ -50,7 +50,10 @@ src
 
 ## Integrating Font-awesome
 1. download
+
     npm install font-awesome --save-dev
+
 2. import
+
     // main.js
     import 'font-awesome/css/font-awesome.min.css'
