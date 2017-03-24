@@ -166,8 +166,12 @@ handleBtnEvent (eventkey) {
 6. show menu
 
 ``` bash
+// template
+<div @click="showMenu($event)">/div>
+
 // methods
-showMenu () {
+showMenu (e) {
+  this.eventObj = e;
   this.$refs.menu.show = true;
 }
 ```
