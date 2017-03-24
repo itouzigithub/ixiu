@@ -26,6 +26,7 @@ npm run build --report
 ```
 
 ## Project Structure
+
 ``` bash
 src
  |--assets
@@ -49,10 +50,12 @@ src
 ```
 
 ## Integrating Font-awesome
+
 1. download
 ``` bash
   npm install font-awesome --save-dev
 ```
+
 2. import
 ``` bash
   // main.js
@@ -60,19 +63,23 @@ src
 ```
 
 ## Using HandleMenu
+
 1. import
 ``` bash
   import handleMenu from '../components/HandleMenu'
 ```
+
 2. register
 ``` bash
   components: {
     'menu': handleMenu
   }
 ```
-    Tip: if the component is registered globally, just skipping the above steps.
+
+> Tip: if the component is registered globally, just skipping the above steps.
 
 3. put in your template
+
 ``` bash
   <menu :e="eventObj"
     v-on:menuEvent="handleBtnEvent"
@@ -82,6 +89,7 @@ src
 ```
 
 4. pass the menu data
+
 ``` bash
   // data
   eventObj: null,
@@ -103,9 +111,11 @@ src
     iconname: 'arrow-right'
   }]
 ```
-    iconnames come from [font-awesome](http://fontawesome.io/icons/)
+
+> iconnames come from [font-awesome](http://fontawesome.io/icons/)
 
 5. define the callback function
+
 ``` bash
   // methods
   handleBtnEvent (eventkey) {
@@ -125,6 +135,7 @@ src
 ```
 
 6. show menu
+
 ``` bash
   // methods
   showMenu () {
