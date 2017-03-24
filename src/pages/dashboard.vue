@@ -88,8 +88,8 @@
 
 <script>
 import promptbox from '../components/PromptBox'
-import pagination from '../components/page.vue'
-import { tip } from '../method'
+import pagination from '../components/Pagination.vue'
+import { tip } from '../methods'
 export default {
   name: 'hello',
   data () {

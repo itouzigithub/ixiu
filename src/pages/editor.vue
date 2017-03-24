@@ -174,7 +174,7 @@
 <script>
 	import handleMenu from '../components/HandleMenu'
 	import promptbox from '../components/PromptBox'
-	import { tip } from '../method'
+	import { tip } from '../methods'
 	export default {
 		data () {
 			return {

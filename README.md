@@ -25,3 +25,25 @@ npm run build
 npm run build --report
 ```
 
+## Project Structure
+``` bash
+src
+ |--assets
+ |--components
+       |--HandleMemnu.vue
+       |--Pagination.vue
+       |--PromptBox.vue
+ |--directives
+       |--index.js
+ |--filters
+       |--index.js
+ |--methods
+       |--index.js
+ |--pages
+       |--dashboard.vue
+       |--editor.vue
+ |--router
+ 			 |--index.js
+ |--App.vue
+ |--main.js
+```
