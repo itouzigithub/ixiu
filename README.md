@@ -67,13 +67,24 @@ src
 2. register
 ```
   components: {
-    'handleMenu': handleMenu
+    'menu': handleMenu
   }
 ```
-  Tip: if the component is registered globally, just skiping the above steps and use it directly.
-3. pass the menu data
+    Tip: if the component is registered globally, just skipping the above steps.
+
+3. put in your template
+```
+  <menu :e="eventObj"
+    v-on:menuEvent="handleBtnEvent"
+    :menudata="menuForBtn"
+    ref="menu">
+  </menu>
+```
+
+4. pass the menu data
 ```
   // data
+  eventObj: null,
   menuForBtn: [{
     name: '编辑',
     eventkey: 1,
@@ -92,7 +103,9 @@ src
     iconname: 'arrow-right'
   }]
 ```
-4. define the callback function
+    iconnames come from [font-awesome](http://fontawesome.io/icons/)
+
+5. define the callback function
 ```
   // methods
   handleBtnEvent (eventkey) {
@@ -109,4 +122,12 @@ src
       case 4:
         // moveRight
     }
+```
+
+6. show menu
+```
+  // methods
+  showMenu () {
+    this.$refs.menu.show = true;
+  }
 ```
