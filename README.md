@@ -366,7 +366,7 @@ http://mms.itouz.com/ixiu
 }
 ```
 
-  Obviously, you should make some change to config/index.js:
+Obviously, you should make some change to config/index.js:
 
 ```
 assetsPublicPath: '/ixiu/'
@@ -375,10 +375,11 @@ assetsPublicPath: '/ixiu/'
 
 4. Inline style: backgoundImage
 
-  In .vue files, if you set backgound-image in inline style, you will go wrong:
+&nbsp;&nbsp;&nbsp;&nbsp;In .vue files, if you set backgound-image in inline style, you might go wrong:
 
 ``` bash
-// both won't work even if the path is right
+// both won't work unless you use absolute path such as:
+// http://static.itouzi.com/image/1.png
 <template>
   <div>
     <div style="backgound-image: url(../assets/1.png)"></div>
@@ -396,7 +397,7 @@ assetsPublicPath: '/ixiu/'
 </script>
 ```
 
-  To fix this, you have to write it anather way:
+To fix this, you have to write it anather way:
 
 ``` bash
 <template>
