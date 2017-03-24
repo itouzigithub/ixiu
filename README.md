@@ -4,10 +4,10 @@
 
 ## Documents you may need
 
-[Vue](https://cn.vuejs.org/v2/guide/)
-[Vue-router](http://router.vuejs.org/zh-cn/essentials/getting-started.html)
-[Vue-cli](http://vuejs-templates.github.io/webpack/index.html)
-[vue-loader](http://vuejs.github.io/vue-loader)
+* [Vue](https://cn.vuejs.org/v2/guide/)
+* [Vue-router](http://router.vuejs.org/zh-cn/essentials/getting-started.html)
+* [Vue-cli](http://vuejs-templates.github.io/webpack/index.html)
+* [vue-loader](http://vuejs.github.io/vue-loader)
 
 ## Build Setup
 
@@ -43,7 +43,7 @@ src
        |--dashboard.vue
        |--editor.vue
  |--router
- 			 |--index.js
+       |--index.js
  |--App.vue
  |--main.js
 ```
