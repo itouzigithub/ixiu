@@ -1,6 +1,7 @@
 # ixiu
 
 > A simple H5 generator based on Vue.js and Vue-router, build with Vue-cli
+> We use less as css processor and  
 
 ## Docs you may need
 
@@ -62,6 +63,22 @@ src
   import 'font-awesome/css/font-awesome.min.css'
 ```
 
+## Integrating less
+
+1. download
+``` bash
+  npm install less less-loader --save-dev
+```
+
+2. mark up
+``` bash
+  <style lang="less">
+    /* write less here */
+  </style>
+```
+
+> Tip: IXIU has already integrated font-awesome and less. Just for illustration.
+
 ## Using HandleMenu
 
 1. import
@@ -77,6 +94,7 @@ src
 ```
 
 > Tip: if the component is registered globally, just skipping the above steps.
+
 
 3. put in your template
 
@@ -114,6 +132,7 @@ src
 
 > iconnames come from [font-awesome](http://fontawesome.io/icons/)
 
+
 5. define the callback function
 
 ``` bash
@@ -142,3 +161,18 @@ src
     this.$refs.menu.show = true;
   }
 ```
+
+## Using Pagination
+
+> import and register rules are just same as HandleMenu
+
+1. put in your template
+
+``` bash
+  // this widget will only show when the totalPage is over 2
+  <div class="page">
+    <page :total="totalPage" @turnpage="turnpage"></page>
+  </div>
+```
+
+2. define turnpage function

@@ -73,13 +73,13 @@ export default {
 </script>
 
 <style scoped lang="less">
-.pagination-bar{
+.pagination-bar {
   border-left: 1px solid #f2f2f2;
-  ul{
+  ul {
     display: block;
     background-color: #fff;
     font-size: 0;
-    li{
+    li {
       display: inline-block;  
       width:36px;
       height:36px;
@@ -93,19 +93,19 @@ export default {
       -moz-user-select: none;
       -o-user-select: none;
       user-select: none;
-      &:not(.current):hover{
-        background-color: #eee;
-      }
       border-right: 1px solid #f2f2f2;  
       border-top: 1px solid #f2f2f2;  
       border-bottom: 1px solid #f2f2f2;        
+      &:not(.current):hover{
+        background-color: #eee;
+      }
     }
-    .current{
+    .current {
       background-color: #ddd;
     }
   }
 }
-.angle-right{
+.angle-right {
   display: inline-block;
   width: 10.5px;
   height: 10px;
@@ -113,7 +113,7 @@ export default {
   border-bottom: 2px solid #ccc;
   transform: rotate(-45deg);
 }
-.angle-left{
+.angle-left {
   display: inline-block;
   width: 10.5px;
   height: 10px;
