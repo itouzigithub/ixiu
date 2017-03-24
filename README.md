@@ -284,10 +284,10 @@ tip('删除失败', false);
 
 > Tip: don't use 'zoom', because firefox doesn't support it
 
-
+<br>
 2. CORS
 
-  [refrence](http://vuejs-templates.github.io/webpack/proxy.html)
+&nbsp;&nbsp;&nbsp;&nbsp;[refrence](http://vuejs-templates.github.io/webpack/proxy.html)
 
 ``` bash
 // config/index.js module.exports.dev
@@ -305,10 +305,10 @@ proxyTable: {
 // 'http://mms.itouzi.com/staticAct/index/publish'
 ```
 
-
+<br>
 3. Config the assets route
 
-  By default, static assets path is composed of
+&nbsp;&nbsp;&nbsp;&nbsp;By default, static assets path is composed of
 
 ``` bash
 // config/index.js module.exports.build:
@@ -317,7 +317,7 @@ assetsPublicPath + assetsSubDirectory
 = '/static'
 ```
 
-  If you write:
+&nbsp;&nbsp;&nbsp;&nbsp;If you write:
 
 ``` bash
 <image src="../assets/1.png">
@@ -327,7 +327,7 @@ or
 }
 ```
 
-  After build, you will get:
+&nbsp;&nbsp;&nbsp;&nbsp;After build, you will get:
 
 ``` bash
 // html
@@ -348,13 +348,15 @@ dist
   |--index.html
 ```
 
-  If you put all the files under the dist in the root directory, everything will work fine. <br>But if not, the output is probably not what you want. <br>For example, suppose your files will eventually go to:
+&nbsp;&nbsp;&nbsp;&nbsp;If you put all the files under the dist in the root directory, everything will work fine. But if not, the output is probably not what you want.
+
+&nbsp;&nbsp;&nbsp;&nbsp;For example, suppose your files will eventually go to:
 
 ```
 http://mms.itouz.com/ixiu
 ```
 
-  So, you want the following path:
+&nbsp;&nbsp;&nbsp;&nbsp;So, you want the following path:
 
 ```
 .demo {
@@ -362,13 +364,13 @@ http://mms.itouz.com/ixiu
 }
 ```
 
-Obviously, you should make some change to config/index.js:
+&nbsp;&nbsp;&nbsp;&nbsp;Obviously, you should make some change to config/index.js:
 
 ```
 assetsPublicPath: '/ixiu/'
 ```
 
-
+<br>
 4. Inline style: backgoundImage
 
 &nbsp;&nbsp;&nbsp;&nbsp;In .vue files, if you set backgound-image in inline style, you might go wrong:
@@ -393,14 +395,9 @@ assetsPublicPath: '/ixiu/'
 </script>
 ```
 
-To fix this, you have to write it anather way:
+&nbsp;&nbsp;&nbsp;&nbsp;To fix this, you have to write it in another way:
 
 ``` bash
-<template>
-  <div>
-    <div :style="{backgoundImage: 'url(' + url + ')'}"></div>
-  </div>
-</template>
 <script>
   export default {
     data () {
