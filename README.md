@@ -176,7 +176,7 @@ showMenu (e) {
 }
 ```
 
-> Tip: by default, the menu widget will hide itself when mouse out
+> Tip: by default, the menu widget will show up where you click and hide itself when mouse out
 
 
 ## Using Pagination
@@ -269,7 +269,7 @@ tip('删除失败', false);
 > Tip: don't use this directive on router-link
 
 
-## Notices
+## Some notices
 
 1. button size
 
@@ -284,9 +284,10 @@ tip('删除失败', false);
 
 > Tip: don't use 'zoom', because firefox doesn't support it
 
+
 2. CORS
 
-[refrence](http://vuejs-templates.github.io/webpack/proxy.html)
+  [refrence](http://vuejs-templates.github.io/webpack/proxy.html)
 
 ``` bash
 // config/index.js module.exports.dev
@@ -304,9 +305,11 @@ proxyTable: {
 // 'http://mms.itouzi.com/staticAct/index/publish'
 ```
 
-3. config the assets route
 
-by default, static assets path is composed of
+3. Config the assets route
+
+  By default, static assets path is composed of
+
 ``` bash
 // config/index.js module.exports.build:
 assetsPublicPath + assetsSubDirectory
@@ -314,24 +317,27 @@ assetsPublicPath + assetsSubDirectory
 = '/static'
 ```
 
-If you write:
+  If you write:
 
 ``` bash
-<image src="1.png">
+<image src="../assets/1.png">
 or
 .demo {
-	backgound-image: url(../assets/1.png)
+  backgound-image: url(../assets/1.png)
 }
 ```
 
-After build, you will get:
+  After build, you will get:
+
 ``` bash
 // html
 <image src="/static/img/1.png">
+
 // css
 .demo {
-	backgound-image: url(/static/img/1.png)
+  backgound-image: url(/static/img/1.png)
 }
+
 // output
 dist
   |--static
@@ -342,66 +348,69 @@ dist
   |--index.html
 ```
 
-If you put all the files under the dist in the root directory, everything will work fine.
-But if not, the output is probably not what you want. 
-For example, suppose your files will eventually go to:
+  If you put all the files under the dist in the root directory, everything will work fine.
+
+  But if not, the output is probably not what you want.
+
+  For example, suppose your files will eventually go to:
 
 ```
 http://mms.itouz.com/ixiu
 ```
 
-So, you want the following path:
+  So, you want the following path:
 
 ```
 .demo {
-	backgound-image: url(/ixiu/static/img/1.png)
+  backgound-image: url(/ixiu/static/img/1.png)
 }
 ```
 
-Obviously, you should make some change to config/index.js:
+  Obviously, you should make some change to config/index.js:
 
 ```
 assetsPublicPath: '/ixiu/'
 ```
 
-4. inline style: backgoundImage
 
-In .vue files, if you set backgound-image in inline style, you will go wrong:
+4. Inline style: backgoundImage
+
+  In .vue files, if you set backgound-image in inline style, you will go wrong:
 
 ``` bash
 // both won't work even if the path is right
 <template>
-	<div>
-		<div style="backgound-image: url(../assets/1.png)"></div>
-		<div :style="{backgoundImage: 'url(' + url + ')'}"></div>
-	</div>
+  <div>
+    <div style="backgound-image: url(../assets/1.png)"></div>
+    <div :style="{backgoundImage: 'url(' + url + ')'}"></div>
+  </div>
 </template>
 <script>
-	export default {
-		data () {
-			return {
-				url: '../assets/1.png'
-			}
-		}
-	}
+  export default {
+    data () {
+      return {
+        url: '../assets/1.png'
+      }
+    }
+  }
 </script>
 ```
 
-To fix this, you have to write it anather way:
+  To fix this, you have to write it anather way:
 
 ``` bash
 <template>
-	<div>
-		<div :style="{backgoundImage: 'url(' + url + ')'}"></div>
-	</div>
+  <div>
+    <div :style="{backgoundImage: 'url(' + url + ')'}"></div>
+  </div>
 </template>
 <script>
-	export default {
-		data () {
-			return {
-				url: require('../assets/1.png')
-			}
-		}
-	}
+  export default {
+    data () {
+      return {
+        url: require('../assets/1.png')
+      }
+    }
+  }
 </script>
 ```
