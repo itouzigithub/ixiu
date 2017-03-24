@@ -14,16 +14,54 @@
 	a:hover {
 		opacity: .9;
 	}
-	
 	#main {
 		position: relative;
+		width: 100%;
+    max-width: 1920px;
+    margin-left: auto;
+    margin-right: auto;
 	}
 </style>
 <body>
 
 	<div id="main">
 		<!-- The html code should be injected here | 请将代码插入这里 -->
+
 	</div>
+
+	<!-- 查看活动是否过期，如是，则替换按钮图片，如否，则为按钮加上相关功能 -->
+	<script>
+    var isExpire;
+		(function () {
+			var xhr = new XMLHttpRequest();
+			xhr.open('get', 'mms.itouzi.com/staticAct/index/isExpire');
+			xhr.onreadystatechange = function () {
+				if (xhr.readyState == 4) {
+					if (xhr.status >=200 && xhr.status <=300 || xhr.status == 304) {
+						var data = xhr.responseText; // 得到返回数据
+						data = JSON.parse(data); // 解码
+						if (data.data.is_expire == 1) {
+							var imgs = document.getElementById('main').querySelectorAll('img');
+							for (var i = imgs.length - 1; i >= 0; i--) {
+								var url = imgs[i].getAttribute('data-url');
+								if (url) {
+									imgs[i].src = url;
+								}
+							}
+						} else {
+              // 为按钮添加功能
+              var btns = document.getElementById('main').querySelectorAll('a');
+              for (var i = btns.length - 1; i >= 0; i--) {
+                var url = btns[i].getAttribute('data-href');
+                btns[i].setAttribute('href', url);
+              }
+            }
+					}
+				}
+			}
+			xhr.send();
+		})();
+	</script>
 	
 </body>
 </html>

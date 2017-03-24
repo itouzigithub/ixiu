@@ -139,7 +139,7 @@ shell-pc.html
   }]
 ```
 
-> iconnames come from [font-awesome](http://fontawesome.io/icons/)
+> Tip: iconnames come from [font-awesome](http://fontawesome.io/icons/)
 
 
 5. define the callback function
@@ -171,12 +171,12 @@ shell-pc.html
   }
 ```
 
-> By default, the menu widget will hide itself when mouse out
+> Tip: by default, the menu widget will hide itself when mouse out
 
 
 ## Using Pagination
 
-> import and register rules are just same as HandleMenu
+> Tip: import and register rules are just same as HandleMenu
 
 1. put in your template
 
@@ -225,7 +225,7 @@ shell-pc.html
 ``` bash
   // methods
   delete (id) {
-    // id is undefined unless you pass it
+    // id is undefined unless you pass one
   }
 ```
 
@@ -260,3 +260,21 @@ shell-pc.html
   <span v-tip.bottom="提示内容">下方提示</span>
   <span v-tip.left="提示内容">左侧提示</span>
 ```
+
+> Tip: don't use this directive on router-link
+
+
+## Notices
+
+1. button size
+
+``` bash
+  @media (-webkit-max-device-pixel-ratio: 1.5) {
+    #main a {
+      transform-origin: top center;
+      transform: scale(.33);
+    }
+  }
+```
+
+> Tip: don't use 'zoom', because firefox doesn't support it
